@@ -1,0 +1,108 @@
+#background {
+    background-image: url("Images/Object.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    
+
+/* Make the nav a horizontal flex container */
+nav {
+    display: flex;
+    justify-content: space-between; /* logo left, menu right */
+    align-items: center;            /* vertical alignment */
+    padding: 20px 40px;             /* spacing around nav */
+}
+
+/* Style the logo */
+nav img {
+    width: 40px;    /* adjust logo size */
+    height: auto;
+}
+
+/* Style the menu as a horizontal list */
+nav ul {
+    list-style: none;      /* remove bullets */
+    display: flex;         /* horizontal layout */
+    gap: 30px;             /* space between links */
+    margin: 0;
+    padding: 30px;
+}
+
+/* Style the links */
+nav ul li a {
+    text-decoration: none;  /* remove underline */
+    color: #333;            /* link color */
+    font-weight: 600;       /* optional bold */
+    transition: color 0.3s;
+}
+
+/* Optional hover effect */
+nav ul li a:hover {
+    color: #eef1f5;         /* change color on hover */
+}
+h1 {font-size: 120px;
+    text-align: center;
+    color: white;
+    font-style: source sans pro;
+    margin-bottom: 2px;
+}
+
+#smile {font-size: 16px;
+    text-align: center;
+    color: white;
+    font-style: sourse sans pro;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 20px;
+}
+button {font-size: 14px;
+    text-align: center;
+    color: white;
+    font-style: sourse sans pro;
+    background-color: #6231bd;
+    border: none;
+    padding: 20px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 120px;
+}
+
+#learn {font-size: 32px;
+    text-align: center;
+    color: white;
+    font-style: sourse sans pro;
+    margin-bottom: 50px;
+}
+
+.highlight {color: #6231bd;}
+
+#teachers {
+    display: flex;
+    justify-content: center;
+    gap: 40px; /* space between each speaker card */
+    margin-top: 2px;
+    text-align: center;
+    border-radius: 50%;
+    color: white;
+    gap: 100px;
+    font-style: sourse sans pro;
+    
+
+}
+
+#img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+.year {
+    display: block;
+    margin-top: 10px;
+    font-style: italic;
+}
+.title {
+    font-style: italic;
+}
