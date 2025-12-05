@@ -1,0 +1,119 @@
+body{
+    background-image: url(images/headphones_hero_1.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* NAVIGATION */
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    color: white;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+    margin-right: 150px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+}
+
+nav a:hover {
+    color: #FF6565;
+    text-decoration: none;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* space between logo and text */
+    color: white;
+    font-size: 20px;  
+}
+
+.logo img {
+    width: 115px;  /* adjust size */
+    height: auto;
+    margin-left: 150px;
+}
+
+
+/* HERO TEXT */
+.bodyh2 {
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-size: 32px;
+    font-weight: bold;
+    margin-top: 250px;
+}
+
+.bodyh3 {
+    display: flex;
+    justify-content: center;
+    font-size: 16px;
+    color: white;
+    margin-top: -25px;
+}
+
+/* BUTTON */
+.callbutton {
+    font-size: 14px;
+    text-align: center;
+    color: white;
+    background-color: #FF6565;
+    border: none;
+    padding: 20px 44px;
+    border-radius: 50px;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 70px;
+}
+
+.callbutton:hover {
+    opacity: 0.9;
+}
+
+/* BODY TEXT */
+.bodyp {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    font-size: 16px;
+}
+/* MOBILE MENU */
+@media (max-width: 768px) {
+
+    .hamburger {
+        display: block; /* show hamburger icon */
+    }
+
+    .nav-links ul {
+        display: none;   /* hide links by default */
+        flex-direction: column;
+        gap: 20px;
+        background: rgba(0,0,0,0.8);
+        padding: 20px;
+        position: absolute;
+        top: 80px;
+        right: 20px;
+        border-radius: 10px;
+    }
+
+    .nav-links.show ul {
+        display: flex; /* show when toggled */
+    }
+}
