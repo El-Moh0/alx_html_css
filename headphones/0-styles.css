@@ -1,17 +1,20 @@
-body{
+body {
+    margin: 0;
     background-image: url(images/headphones_hero_1.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    min-height: 100vh;
 }
 
 /* NAVIGATION */
-nav{
+nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px 40px;
     color: white;
+    position: relative;
 }
 
 nav ul {
@@ -37,17 +40,31 @@ nav a:hover {
 .logo {
     display: flex;
     align-items: center;
-    gap: 10px; /* space between logo and text */
+    gap: 10px;
     color: white;
-    font-size: 20px;  
+    font-size: 20px;
 }
 
 .logo img {
-    width: 115px;  /* adjust size */
+    width: 115px;
     height: auto;
     margin-left: 150px;
 }
 
+/* Hamburger Menu Icon */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    transition: 0.3s;
+}
 
 /* HERO TEXT */
 .bodyh2 {
@@ -57,6 +74,8 @@ nav a:hover {
     font-size: 32px;
     font-weight: bold;
     margin-top: 250px;
+    text-align: center;
+    padding: 0 20px;
 }
 
 .bodyh3 {
@@ -65,6 +84,8 @@ nav a:hover {
     font-size: 16px;
     color: white;
     margin-top: -25px;
+    text-align: center;
+    padding: 0 20px;
 }
 
 /* BUTTON */
@@ -93,27 +114,81 @@ nav a:hover {
     text-align: center;
     color: white;
     font-size: 16px;
+    padding: 0 20px;
 }
-/* MOBILE MENU */
+
+/* MOBILE STYLES */
 @media (max-width: 768px) {
-
-    .hamburger {
-        display: block; /* show hamburger icon */
-    }
-
-    .nav-links ul {
-        display: none;   /* hide links by default */
-        flex-direction: column;
-        gap: 20px;
-        background: rgba(0,0,0,0.8);
+    nav {
         padding: 20px;
-        position: absolute;
-        top: 80px;
-        right: 20px;
-        border-radius: 10px;
     }
 
-    .nav-links.show ul {
-        display: flex; /* show when toggled */
+    .logo img {
+        margin-left: 0;
+        width: 100px;
+    }
+
+    /* Show hamburger icon on mobile */
+    .hamburger {
+        display: flex;
+        z-index: 1000;
+    }
+
+    /* Hide nav menu by default on mobile */
+    nav ul {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 70%;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.95);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+        margin: 0;
+        transition: right 0.3s ease;
+    }
+
+    /* Show nav menu when active */
+    nav ul.active {
+        right: 0;
+    }
+
+    nav ul li {
+        font-size: 20px;
+    }
+
+    .bodyh2 {
+        font-size: 28px;
+        margin-top: 150px;
+    }
+
+    .bodyh3 {
+        font-size: 14px;
+    }
+
+    .bodyp br {
+        display: none;
+    }
+
+    .callbutton {
+        padding: 15px 35px;
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 480px) {
+    .bodyh2 {
+        font-size: 24px;
+        margin-top: 100px;
+    }
+
+    .bodyh3 {
+        font-size: 13px;
+    }
+
+    .bodyp {
+        font-size: 14px;
     }
 }

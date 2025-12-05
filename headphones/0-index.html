@@ -7,21 +7,24 @@
     <link rel="stylesheet" href="0-styles.css">
 </head>
 <body>
-
 <header>
     <nav>
-       <div class="logo">
-    <img src="images/logo_headphones.png" alt="Headphone Logo">
-</div>
-<!-- HAMBURGER BUTTON -->
-        <div class="hamburger">
-            &#9776;
+        <div class="logo">
+            <img src="images/logo_headphones.png" alt="Headphone Logo">
         </div>
+        
+        <!-- Hamburger Icon -->
+        <div class="hamburger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
         <div>
-            <ul>
-                <li><a href="#">what we do</a></li>
-                <li><a href="#">our results</a></li>
-                <li><a href="#">contact us</a></li>
+            <ul id="navMenu">
+                <li><a href="#" onclick="toggleMenu()">what we do</a></li>
+                <li><a href="#" onclick="toggleMenu()">our results</a></li>
+                <li><a href="#" onclick="toggleMenu()">contact us</a></li>
             </ul>
         </div>
     </nav>
@@ -29,9 +32,7 @@
 
 <h2 class="bodyh2">Lorem ipsum dolor set amet lorem ipsum</h2>
 <h3 class="bodyh3">Lorem ipsum dolor set amet lorem ipsum dolor set</h3>
-
 <button class="callbutton">CALL TO ACTION</button>
-
 <p class="bodyp">
     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
     incididunt ut <br> labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
@@ -39,5 +40,22 @@
     dolor in reprehenderit in <br> voluptate velit esse cillum dolore eu fugiat nulla pariatur.
 </p>
 
+<script>
+    function toggleMenu() {
+        const navMenu = document.getElementById('navMenu');
+        navMenu.classList.toggle('active');
+    }
+
+    // Close menu when clicking outside
+    document.addEventListener('click', function(event) {
+        const navMenu = document.getElementById('navMenu');
+        const hamburger = document.querySelector('.hamburger');
+        const nav = document.querySelector('nav');
+        
+        if (!nav.contains(event.target)) {
+            navMenu.classList.remove('active');
+        }
+    });
+</script>
 </body>
 </html>
