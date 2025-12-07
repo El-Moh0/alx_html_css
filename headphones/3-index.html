@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="3-styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section class="background">
+<header>
+    <nav>
+        <div class="logo">
+            <img src="images/logo_headphones.png" alt="Headphone Logo">
+        </div>
+        
+        <!-- Hamburger Icon -->
+        <div class="hamburger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <div>
+            <ul id="navMenu">
+                <li><a href="#" onclick="toggleMenu()">what we do</a></li>
+                <li><a href="#" onclick="toggleMenu()">our results</a></li>
+                <li><a href="#" onclick="toggleMenu()">contact us</a></li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+<h2 class="bodyh2">Lorem ipsum dolor set amet lorem ipsum</h2>
+<h3 class="bodyh3">Lorem ipsum dolor set amet lorem ipsum dolor set</h3>
+<button class="callbutton">CALL TO ACTION</button>
+<p class="bodyp">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+    incididunt ut <br> labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+    exercitation ullamco <br> laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+    dolor in reprehenderit in <br> voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+</p>
+</section>
+
+
+<script>
+    function toggleMenu() {
+        const navMenu = document.getElementById('navMenu');
+        navMenu.classList.toggle('active');
+    }
+
+    // Close menu when clicking outside
+    document.addEventListener('click', function(event) {
+        const navMenu = document.getElementById('navMenu');
+        const hamburger = document.querySelector('.hamburger');
+        const nav = document.querySelector('nav');
+        
+        if (!nav.contains(event.target)) {
+            navMenu.classList.remove('active');
+        }
+    });
+</script>
+
+<section>
+   <p class="whatwedop">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut <br> labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco <br> laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in <br> voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+   <section class="wedo">
+    <div>
+     <span class="holberton_school-icon-ic_sound"></span>
+        <div>
+            <p class="sound">Lorem ipsum dolor sit amet, <br> consectetur adipiscing elit.</p>
+        </div>
+    </div>
+        <div>
+             <span class="holberton_school-icon-ic_video"></span>
+            <p class="video">Lorem ipsum dolor sit amet, <br> consectetur adipiscing elit.</p>
+        </div>
+    <div>
+            <span class="holberton_school-icon-ic_music icon-large"></span>
+
+            <p class="music">Lorem ipsum dolor sit amet, <br>consectetur adipiscing elit.</p>
+        </div>
+    </div>
+     <div>
+       <span class="holberton_school-icon-ic_hearing"></span>
+        <div>
+            <p class="hearing">Lorem ipsum dolor sit amet, <br>consectetur adipiscing elit.</p>
+        </div>
+    </div>
+   </section>
+    <section class="second_background">
+        <div>
+            <h2 class="results">Our results speaks for themselves</h2>
+        </div>
+        <div>
+        <p class="second_paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut <br> labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco <br> laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in <br> voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+        </div>
+        <section class="all_pentagon">
+        <div class="pentagon1">
+            <img src="images/pentagone.png" alt="" class="pentagon">
+            <div class="text_top">+2%</div>
+            <div class="text_bottom">Lorem ipsum dolor</div>
+        </div>
+         <div class="pentagon1">
+            <img src="images/pentagone.png" alt="" class="pentagon">
+            <div class="text_top">+2%</div>
+            <div class="text_bottom">Lorem ipsum dolor</div>
+        </div>
+         <div class="pentagon1">
+            <img src="images/pentagone.png" alt="" class="pentagon">
+            <div class="text_top">+2%</div>
+            <div class="text_bottom">Lorem ipsum dolor</div>
+        </div>
+         <div class="pentagon1">
+            <img src="images/pentagone.png" alt="" class="pentagon">
+            <div class="text_top">+2%</div>
+            <div class="text_bottom">Lorem ipsum dolor</div>
+        </div>
+    </section>
+    </section>
+    <section>
+    <div class="contact_us">
+        <h2>Contact Us</h2>
+    </div>
+
+    <div class="forms">
+        <form class="form">
+
+            <div>
+                <label>Names</label>
+                <input type="text" name="name" required>
+            </div>
+
+            <div>
+                <label>Email</label>
+                <input type="email" name="email" required>
+            </div>
+
+            <div>
+                <label>Your message</label>
+                <textarea name="message" rows="3" required></textarea>
+            </div>
+
+            <div>
+                <button class="callbutton2" type="submit">CALL TO ACTION</button>
+            </div>
+
+        </form>
+    </div>
+</section>
+
+</body>
+</html>
